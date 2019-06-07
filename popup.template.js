@@ -51,16 +51,22 @@ function getContentRootDom() {
   return document.querySelector("#content")
 }
 
-function onClickLGTMImage() {
-  const imageUrl = event.target.getAttribute('src')
-  navigator.clipboard.writeText(imageUrl)
-  .then(() => {
-    console.log('copied to clipboard');
-  }, () => {
-    console.log('failed to copy');
-  });
+function imageURLToMarkdownFormat(url) {
+  return `![img](${url} "img")`
 }
 
+function onClickLGTMImage() {
+  const imageUrl = event.target.getAttribute('src')
+  getCurrentTabUrl().then(url => {
+    return url.includes("https://github.com") ? imageURLToMarkdownFormat(imageUrl) : imageUrl
+  })
+  .then(text => navigator.clipboard.writeText(text))
+  .then(() => {
+    console.log('copied to clipboard');
+  }, (e) => {
+    console.log('failed to copy', e);
+  });
+}
 function start() {
   document.querySelector(".more-load-button").addEventListener('click', onClickMoreLoadButton)
   document.addEventListener("click", (event) => {
@@ -96,4 +102,12 @@ function getRandomInt(min, max) {
   min = Math.ceil(min)
   max = Math.floor(max)
   return Math.floor(Math.random() * (max - min)) + min //The maximum is exclusive and the minimum is inclusive
+}
+
+function getCurrentTabUrl() {
+  return new Promise((res) => {
+    chrome.tabs.getSelected(tab => {  
+      res(tab.url)
+    });
+  })
 }
