@@ -1,3 +1,7 @@
 このプロジェクトのルートディレクトリをchrome拡張として読み込んで使う
 
-office365のcalenderページに移動したあと、ブラウザに現れてる`S`マークのアイコンを開く
+ブラウザに現れてる`L`マークのアイコンを開く
+
+https://www.lgtm.app/
+
+https://lgtmoon.herokuapp.com/
