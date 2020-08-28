@@ -1,1 +1,3 @@
-console.log("hello")
+import {start} from "./src/app"
+
+start();
