@@ -1,6 +1,5 @@
 // Helpers
 
-
 export function chunk<T>(inputArray: T[], perChunk: number):T[][] {
     return inputArray.reduce(
       (resultArray: T[][], item, index) => {

@@ -1,6 +1,6 @@
 
 import {getCurrentTabUrl} from "./utils";
-import {ImageFetcher, ImageFetcherOnLgtmFun} from "./fetcher";
+import {ImageFetcher, ImageFetcherOnLgtmFun, ImageFetcherOnLgtmoon} from "./fetcher";
 import {ImageRenderer, ImageRendererOnDom} from "./renderer"
 
 
@@ -36,7 +36,7 @@ class App {
 
 export function start() {
     const app = new App(
-        new ImageFetcherOnLgtmFun(),
+        new ImageFetcherOnLgtmoon(),
         new ImageRendererOnDom(),
     );
 

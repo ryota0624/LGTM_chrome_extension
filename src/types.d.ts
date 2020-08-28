@@ -1,4 +1,4 @@
-declare const chrome = {
+export declare const chrome = {
     tabs: any
 }
 
