@@ -1,2 +1,4 @@
-popup.js
 .env
+node_modules
+dist
+.cache

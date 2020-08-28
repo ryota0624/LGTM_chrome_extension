@@ -1,0 +1,1 @@
+{"version":3,"sources":["popup.js"],"names":["console","log"],"mappings":";AAAAA,QAAQC,IAAI","file":"popup.js","sourceRoot":"..","sourcesContent":["console.log(\"hello\")"]}

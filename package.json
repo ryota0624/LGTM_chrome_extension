@@ -1,0 +1,26 @@
+{
+  "name": "LGTM_chrome_extension",
+  "version": "1.0.0",
+  "description": "このプロジェクトのルートディレクトリをchrome拡張として読み込んで使う",
+  "main": "background.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel html/popup.dev.html",
+    "build": "rm -rf .cache && parcel build popup.js --no-content-hash -d extension"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryota0624/LGTM_chrome_extension.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryota0624/LGTM_chrome_extension/issues"
+  },
+  "homepage": "https://github.com/ryota0624/LGTM_chrome_extension#readme",
+  "dependencies": {
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^4.0.2"
+  }
+}
